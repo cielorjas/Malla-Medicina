@@ -1,0 +1,102 @@
+/* Estilos base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.instruccion {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #34495e;
+  margin: 30px 0 10px 0;
+}
+
+/* Contenedor de cursos */
+#malla-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cada sección por año */
+.anio {
+  margin-bottom: 40px;
+}
+
+/* Tarjetas de curso */
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.curso {
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 220px;
+  min-height: 80px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+/* Estados */
+.curso.pendiente {
+  background-color: #fdecea;
+  border-color: #e74c3c;
+  color: #c0392b;
+}
+
+.curso.en-curso {
+  background-color: #fff8e1;
+  border-color: #f1c40f;
+  color: #b7950b;
+}
+
+.curso.aprobado {
+  background-color: #e6f4ea;
+  border-color: #27ae60;
+  color: #1e8449;
+}
+
+/* Cursos bloqueados */
+.curso.bloqueado {
+  background-color: #eeeeee;
+  border-color: #aaaaaa;
+  color: #888888;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.curso.bloqueado::after {
+  content: "🔒";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .curso {
+    width: 100%;
+  }
+}
