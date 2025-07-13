@@ -1,104 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Curricular Medicina</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f5f5f5;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .ciclo {
-      margin-bottom: 30px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-    th {
-      background: #2980b9;
-      color: white;
-    }
-    .aprobado { background-color: #d4edda; }
-    .curso { font-weight: bold; }
-    .pendiente { background-color: #f8d7da; }
-    .en-curso { background-color: #fff3cd; }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Malla Curricular - Medicina Humana</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1>Malla Curricular - Medicina Humana</h1>
+  <p class="instruccion">Haz clic sobre cada curso para marcarlo como "En curso" o "Aprobado". Los cursos con requisitos se desbloquean automáticamente.</p>
+  <div id="malla-container">
 
-  <h1>Malla Curricular Medicina Humana</h1>
+    <!-- PRIMER AÑO -->
+    <section class="anio" data-anio="1">
+      <h2>🧪 Primer Año</h2>
+      <div class="cursos">
+        <div class="curso" data-nombre="Complementos de Matemática">Complementos de Matemática</div>
+        <div class="curso" data-nombre="Desarrollo del Talento">Desarrollo del Talento</div>
+        <div class="curso" data-nombre="Fundamentos Biológicos 1">Fundamentos Biológicos 1</div>
+        <div class="curso" data-nombre="Morfología y Fisiología Clínica">Morfología y Fisiología Clínica</div>
+        <div class="curso" data-nombre="Comunicación 1">Comunicación 1</div>
+      </div>
+    </section>
+    <!-- SEGUNDO AÑO -->
+    <section class="anio" data-anio="2">
+      <h2>🧬 Segundo Año</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Introducción a la Medicina" data-requisitos="Fundamentos Biológicos 1,Morfología y Fisiología Clínica,Comunicación 1">Introducción a la Medicina</div>
+        <div class="curso bloqueado" data-nombre="Habilidades Comunicativas en Salud" data-requisitos="Comunicación 1">Habilidades Comunicativas en Salud</div>
+        <div class="curso bloqueado" data-nombre="Gestión y Búsqueda de Información Científica">Gestión y Búsqueda de Información Científica</div>
+        <div class="curso bloqueado" data-nombre="Fundamentos Biológicos 2" data-requisitos="Complementos de Matemática,Fundamentos Biológicos 1">Fundamentos Biológicos 2</div>
+        <div class="curso bloqueado" data-nombre="Sistema Tegumentario" data-requisitos="Fundamentos Biológicos 1,Morfología y Fisiología Clínica">Sistema Tegumentario</div>
+        <div class="curso bloqueado" data-nombre="Sistema Nervioso" data-requisitos="Fundamentos Biológicos 1,Morfología y Fisiología Clínica">Sistema Nervioso</div>
+        <div class="curso bloqueado" data-nombre="Práctica Médica Integrada 1" data-requisitos="Fundamentos Biológicos 1,Morfología y Fisiología Clínica">Práctica Médica Integrada 1</div>
+      </div>
+    </section>
 
-  <div class="ciclo">
-    <h2>🧪 Ciclo 1</h2>
-    <table>
-      <tr>
-        <th>Curso</th>
-        <th>Código</th>
-        <th>Créditos</th>
-        <th>Requisitos</th>
-        <th>Estado</th>
-      </tr>
-      <tr class="aprobado">
-        <td class="curso">Complementos de Matemática</td>
-        <td>MATH1001</td>
-        <td>5</td>
-        <td>---</td>
-        <td>✅ Aprobado</td>
-      </tr>
-      <tr class="en-curso">
-        <td class="curso">Fundamentos Biológicos 1</td>
-        <td>BIOL1109</td>
-        <td>5</td>
-        <td>---</td>
-        <td>🟡 En curso</td>
-      </tr>
-      <tr class="pendiente">
-        <td class="curso">Desarrollo del Talento</td>
-        <td>RRHH1101</td>
-        <td>2</td>
-        <td>---</td>
-        <td>⏳ Pendiente</td>
-      </tr>
-    </table>
+    <!-- TERCER AÑO -->
+    <section class="anio" data-anio="3">
+      <h2>🧠 Tercer Año</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Mecanismos de Agresión y Defensa Biológica" data-requisitos="Fundamentos Biológicos 2">Mecanismos de Agresión y Defensa Biológica</div>
+        <div class="curso bloqueado" data-nombre="Determinantes Sociales de la Salud y Realidad Sanitaria" data-requisitos="Habilidades Comunicativas en Salud">Determinantes Sociales de la Salud y Realidad Sanitaria</div>
+        <div class="curso bloqueado" data-nombre="Ciudadanía Global">Ciudadanía Global</div>
+        <div class="curso bloqueado" data-nombre="Herramientas Informáticas">Herramientas Informáticas</div>
+        <div class="curso bloqueado" data-nombre="Sistema Circulatorio" data-requisitos="Sistema Tegumentario,Sistema Nervioso,Práctica Médica Integrada 1">Sistema Circulatorio</div>
+        <div class="curso bloqueado" data-nombre="Sistema Respiratorio" data-requisitos="Sistema Tegumentario,Sistema Nervioso,Práctica Médica Integrada 1">Sistema Respiratorio</div>
+        <div class="curso bloqueado" data-nombre="Práctica Médica Integrada 2" data-requisitos="Práctica Médica Integrada 1">Práctica Médica Integrada 2</div>
+      </div>
+    </section>
+    <!-- CUARTO AÑO -->
+    <section class="anio" data-anio="4">
+      <h2>🧬 Cuarto Año</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Bioestadística" data-requisitos="Complementos de Matemática">Bioestadística</div>
+        <div class="curso bloqueado" data-nombre="Inmunidad e Infección" data-requisitos="Fundamentos Biológicos 2,Mecanismos de Agresión y Defensa Biológica">Inmunidad e Infección</div>
+        <div class="curso bloqueado" data-nombre="Bases Farmacológicas" data-requisitos="Fundamentos Biológicos 2,Mecanismos de Agresión y Defensa Biológica">Bases Farmacológicas</div>
+        <div class="curso bloqueado" data-nombre="Responsabilidad Social">Responsabilidad Social</div>
+        <div class="curso bloqueado" data-nombre="Sistema Endocrino y Reproductor" data-requisitos="Sistema Circulatorio,Sistema Respiratorio,Práctica Médica Integrada 2">Sistema Endocrino y Reproductor</div>
+        <div class="curso bloqueado" data-nombre="Sistema Excretor" data-requisitos="Sistema Circulatorio,Sistema Respiratorio,Práctica Médica Integrada 2">Sistema Excretor</div>
+        <div class="curso bloqueado" data-nombre="Práctica Médica Integrada 3" data-requisitos="Sistema Circulatorio,Sistema Respiratorio,Práctica Médica Integrada 2">Práctica Médica Integrada 3</div>
+      </div>
+    </section>
+
+    <!-- QUINTO AÑO -->
+    <section class="anio" data-anio="5">
+      <h2>🧬 Quinto Año</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Integración Clínica Patológica 1" data-requisitos="Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Integración Clínica Patológica 1</div>
+        <div class="curso bloqueado" data-nombre="Epidemiología y Demografía" data-requisitos="Bioestadística">Epidemiología y Demografía</div>
+        <div class="curso bloqueado" data-nombre="Sistema Hematopoyético" data-requisitos="Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Sistema Hematopoyético</div>
+        <div class="curso bloqueado" data-nombre="Sistema Locomotor" data-requisitos="Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Sistema Locomotor</div>
+        <div class="curso bloqueado" data-nombre="Sistema Digestivo" data-requisitos="Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Sistema Digestivo</div>
+        <div class="curso bloqueado" data-nombre="Clínica Nutricional" data-requisitos="Inmunidad e Infección,Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Clínica Nutricional</div>
+        <div class="curso bloqueado" data-nombre="Práctica Médica Integrada 4" data-requisitos="Sistema Endocrino y Reproductor,Sistema Excretor,Práctica Médica Integrada 3">Práctica Médica Integrada 4</div>
+      </div>
+    </section>
+    <!-- SEXTO AÑO -->
+    <section class="anio" data-anio="6">
+      <h2>🩺 Sexto Año</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Metodología de la Investigación" data-requisitos="Gestión y Búsqueda de Información Científica">Metodología de la Investigación</div>
+        <div class="curso bloqueado" data-nombre="Genética Médica" data-requisitos="Sistema Hematopoyético,Sistema Locomotor,Sistema Digestivo,Práctica Médica Integrada 4">Genética Médica</div>
+        <div class="curso bloqueado" data-nombre="Salud Pública y Salud Global" data-requisitos="Epidemiología y Demografía,Clínica Nutricional">Salud Pública y Salud Global</div>
+        <div class="curso bloqueado" data-nombre="Integración Clínica Patológica 2" data-requisitos="Sistema Hematopoyético,Sistema Locomotor,Sistema Digestivo,Integración Clínica Patológica 1">Integración Clínica Patológica 2</div>
+        <div class="curso bloqueado" data-nombre="Práctica Clínica Integrada 1" data-requisitos="Integración Clínica Patológica 1,Sistema Hematopoyético,Sistema Locomotor,Sistema Digestivo,Práctica Médica Integrada 4">Práctica Clínica Integrada 1</div>
+        <div class="curso bloqueado" data-nombre="Pre Beginner 1">Pre Beginner 1</div>
+      </div>
+    </section>
+
+    <!-- SÉPTIMO AÑO -->
+    <section class="anio" data-anio="7">
+      <h2>🧑‍⚕️ Séptimo Año (Internado)</h2>
+      <div class="cursos">
+        <div class="curso bloqueado" data-nombre="Internado de Medicina" data-requisitos="255 CRÉDITOS APROBADOS">Internado de Medicina</div>
+        <div class="curso bloqueado" data-nombre="Internado de Cirugía" data-requisitos="255 CRÉDITOS APROBADOS">Internado de Cirugía</div>
+        <div class="curso bloqueado" data-nombre="Internado de Ginecología Obstetricia" data-requisitos="255 CRÉDITOS APROBADOS">Internado de Ginecología Obstetricia</div>
+        <div class="curso bloqueado" data-nombre="Internado de Pediatría" data-requisitos="255 CRÉDITOS APROBADOS">Internado de Pediatría</div>
+        <div class="curso bloqueado" data-nombre="Trabajo de Investigación" data-requisitos="Proyecto de Investigación 2">Trabajo de Investigación</div>
+      </div>
+    </section>
   </div>
-
-  <div class="ciclo">
-    <h2>🧬 Ciclo 2</h2>
-    <table>
-      <tr>
-        <th>Curso</th>
-        <th>Código</th>
-        <th>Créditos</th>
-        <th>Requisitos</th>
-        <th>Estado</th>
-      </tr>
-      <tr class="pendiente">
-        <td class="curso">Fundamentos Biológicos 2</td>
-        <td>BIOL1110</td>
-        <td>4</td>
-        <td>Fund. Biológicos 1 + Comp. Matemática</td>
-        <td>⏳ Pendiente</td>
-      </tr>
-      <tr class="pendiente">
-        <td class="curso">Sistema Tegumentario</td>
-        <td>FSLG1102</td>
-        <td>3</td>
-        <td>Fund. Bio. 1 + Morfología</td>
-        <td>⏳ Pendiente</td>
-      </tr>
-    </table>
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>
