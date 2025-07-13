@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Medicina</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .ciclo {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #2980b9;
+      color: white;
+    }
+    .aprobado { background-color: #d4edda; }
+    .curso { font-weight: bold; }
+    .pendiente { background-color: #f8d7da; }
+    .en-curso { background-color: #fff3cd; }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Curricular Medicina Humana</h1>
+
+  <div class="ciclo">
+    <h2>🧪 Ciclo 1</h2>
+    <table>
+      <tr>
+        <th>Curso</th>
+        <th>Código</th>
+        <th>Créditos</th>
+        <th>Requisitos</th>
+        <th>Estado</th>
+      </tr>
+      <tr class="aprobado">
+        <td class="curso">Complementos de Matemática</td>
+        <td>MATH1001</td>
+        <td>5</td>
+        <td>---</td>
+        <td>✅ Aprobado</td>
+      </tr>
+      <tr class="en-curso">
+        <td class="curso">Fundamentos Biológicos 1</td>
+        <td>BIOL1109</td>
+        <td>5</td>
+        <td>---</td>
+        <td>🟡 En curso</td>
+      </tr>
+      <tr class="pendiente">
+        <td class="curso">Desarrollo del Talento</td>
+        <td>RRHH1101</td>
+        <td>2</td>
+        <td>---</td>
+        <td>⏳ Pendiente</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="ciclo">
+    <h2>🧬 Ciclo 2</h2>
+    <table>
+      <tr>
+        <th>Curso</th>
+        <th>Código</th>
+        <th>Créditos</th>
+        <th>Requisitos</th>
+        <th>Estado</th>
+      </tr>
+      <tr class="pendiente">
+        <td class="curso">Fundamentos Biológicos 2</td>
+        <td>BIOL1110</td>
+        <td>4</td>
+        <td>Fund. Biológicos 1 + Comp. Matemática</td>
+        <td>⏳ Pendiente</td>
+      </tr>
+      <tr class="pendiente">
+        <td class="curso">Sistema Tegumentario</td>
+        <td>FSLG1102</td>
+        <td>3</td>
+        <td>Fund. Bio. 1 + Morfología</td>
+        <td>⏳ Pendiente</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
